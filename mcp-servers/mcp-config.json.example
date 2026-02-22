@@ -1,0 +1,43 @@
+{
+    "mcpServers": {
+        "radar-ast": {
+            "command": "radar-ast/.venv/bin/python",
+            "args": [
+                "radar-ast/server.py"
+            ],
+            "env": {
+                "OLLAMA_URL": "http://localhost:11434/api/generate",
+                "OLLAMA_MODEL": "qwen2.5-coder:14b",
+                "OLLAMA_NUM_CTX": "32768",
+                "OLLAMA_TEMPERATURE": "0.1"
+            },
+            "disabled": false,
+            "description": "Codebase scanner & AST summarizer. Use this when you need to understand project structure or get a logic summary of complex files without reading raw code."
+        },
+        "cargo-db": {
+            "command": "cargo-db/.venv/bin/python",
+            "args": [
+                "cargo-db/server.py"
+            ],
+            "env": {
+                "DB_CONNECTION_STRING": "postgresql://user:pass@localhost:5432/cargo"
+            },
+            "disabled": true,
+            "description": "Database introspection tool. Use this exclusively to query schemas, find table relations, read records, and analyze query performance on the specific database."
+        },
+        "debug-probe": {
+            "command": "debug-probe/.venv/bin/python",
+            "args": [
+                "debug-probe/server.py"
+            ],
+            "env": {
+                "OLLAMA_URL": "http://localhost:11434/api/generate",
+                "OLLAMA_MODEL": "qwen2.5-coder:14b",
+                "OLLAMA_NUM_CTX": "32768",
+                "OLLAMA_TEMPERATURE": "0.1"
+            },
+            "disabled": false,
+            "description": "Automated debugging assistant. Execute scripts/tests safely, intelligently filter logs, and leverage local LLMs to diagnose complex stack traces."
+        }
+    }
+}

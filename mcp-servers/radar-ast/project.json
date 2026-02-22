@@ -1,0 +1,30 @@
+{
+    "name": "radar-ast",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "mcp-servers/radar-ast",
+    "projectType": "application",
+    "targets": {
+        "setup": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "make setup",
+                "cwd": "mcp-servers/radar-ast"
+            }
+        },
+        "run": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "make run",
+                "cwd": "mcp-servers/radar-ast"
+            }
+        },
+        "clean": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "make clean",
+                "cwd": "mcp-servers/radar-ast"
+            }
+        }
+    },
+    "tags": []
+}

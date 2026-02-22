@@ -1,0 +1,12 @@
+{
+  "name": "shuttles",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "nx": "nx"
+  },
+  "private": true,
+  "devDependencies": {
+    "nx": "latest"
+  }
+}

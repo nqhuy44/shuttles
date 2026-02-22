@@ -1,0 +1,30 @@
+{
+    "name": "cargo-db",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "mcp-servers/cargo-db",
+    "projectType": "application",
+    "targets": {
+        "setup": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "make setup",
+                "cwd": "mcp-servers/cargo-db"
+            }
+        },
+        "run": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "make run",
+                "cwd": "mcp-servers/cargo-db"
+            }
+        },
+        "clean": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "make clean",
+                "cwd": "mcp-servers/cargo-db"
+            }
+        }
+    },
+    "tags": []
+}

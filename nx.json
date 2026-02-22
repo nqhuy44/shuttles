@@ -1,0 +1,34 @@
+{
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "defaultBase": "main",
+    "namedInputs": {
+        "default": [
+            "{projectRoot}/**/*",
+            "sharedGlobals"
+        ],
+        "production": [
+            "default"
+        ],
+        "sharedGlobals": []
+    },
+    "targetDefaults": {
+        "setup": {
+            "cache": true
+        },
+        "run": {
+            "dependsOn": [
+                "setup"
+            ]
+        },
+        "start": {
+            "dependsOn": [
+                "setup"
+            ]
+        }
+    },
+    "workspaceLayout": {
+        "appsDir": "mcp-servers",
+        "libsDir": "core"
+    },
+    "plugins": []
+}
