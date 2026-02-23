@@ -25,6 +25,9 @@ This skill provides deterministic database introspection to ensure consistent sc
 - **Use Case**: Connecting disparate tables.
 - **Mandate**: Use this to find the most efficient FK path instead of guessing.
 
+### 5. The TOON Response Protocol
+**Mandatory** for data exploration. All `SELECT` results must be transmitted in TOON format (Array of Arrays) to avoid repeating field names in every row. Refer to `doc-scribe`'s implementation if unsure.
+
 ## Data Strategy
 
 1. **Schema First**: Check `docs/DATABASE.md` first, then verify with `get_schema`.

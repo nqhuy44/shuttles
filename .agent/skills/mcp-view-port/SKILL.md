@@ -25,6 +25,9 @@ This skill enables "Visual Reasoning" for the AI by stripping noise and extracti
 - **Use Case**: Linking to pages or understanding the application flow.
 - **Mandate**: Use this to find the correct URL paths (e.g., `/users/:id`).
 
+### 5. The TOON Response Protocol
+**Mandatory** for tabular UI data. Component registries (`scan_ui_components`) and route maps (`map_frontend_routes`) should prefer TOON format if the list is extensive, keeping headers separate from row data.
+
 ## Frontend Strategy
 
 1. **Token Hygiene**: Stick to values found in `extract_design_tokens`.

@@ -25,6 +25,9 @@ This skill ensures documentation hygiene and "Ruthless Token Efficiency" by avoi
 - **Use Case**: Maintaining repository standards for Python docstrings (Google style).
 - **Mandate**: Use this for all new public functions/classes in the `shuttles` monorepo.
 
+### 5. The TOON Response Protocol
+**Mandatory** for structural data. TOC extraction and any tabular summaries must follow the TOON format (Array of Arrays) to ensure the AI receives maximum information at minimum cost.
+
 ## Documentation Guidelines
 
 1. **Deterministic Indexing**: Use `get_markdown_toc` before `view_file`.

@@ -35,6 +35,12 @@ For large configuration or documentation files, **never** perform a full-file re
 - Use `doc-scribe.patch_doc_section` to target specific headings.
 - If a Code Patch tool exists (e.g., in radar-ast), use it for specific line replacement.
 
+### 4. The TOON (Token Optimized Output Notation) Protocol
+**Mandatory** for all tabular or list-based data. When transmitting data to Gemini:
+- **Never** use verbose JSON objects for rows: `[{"id": 1, "val": "A"}, {"id": 2, "val": "B"}]`.
+- **Always** use TOON format (Array of Arrays): `[["id", "val"], [1, "A"], [2, "B"]]`.
+- Use compact separators (no spaces) to minimize token footprint.
+
 ## Tool Selection Matrix
 
 | Objective | Server | Primary Tool | Avoid |

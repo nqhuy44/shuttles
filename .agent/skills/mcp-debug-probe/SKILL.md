@@ -21,6 +21,9 @@ This skill focuses on "Container-Aware" observation and intelligent troubleshoot
 - **Use Case**: Pinpointing the root cause of a complex stack trace.
 - **Protocol**: Feed the raw messy output from `run_and_capture` directly into this tool. The result is a distilled "Diagnosis" from the local LLM.
 
+### 4. The TOON Response Protocol
+**Mandatory** for log analysis and test results. When returning tabular diagnostics or list-based capture data, use the TOON format (Array of Arrays) for extreme efficiency.
+
 ## Debugging Workflow
 
 1. **Isolate**: Use `run_and_capture` for the specific failing command.
