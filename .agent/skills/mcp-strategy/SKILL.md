@@ -17,12 +17,12 @@ This skill directs the AI on how to interact with the Shuttles MCP ecosystem eff
 
 ## Specialized Server Skills
 For detailed instructions on each server, refer to their dedicated skills:
-- [Radar AST (Code Structure)](file:../mcp-radar-ast/SKILL.md)
-- [Doc Scribe (Documentation)](file:../mcp-doc-scribe/SKILL.md)
-- [Debug Probe (Diagnostics)](file:../mcp-debug-probe/SKILL.md)
-- [Cargo DB (Data)](file:../mcp-cargo-db/SKILL.md)
-- [View Port (Frontend)](file:../mcp-view-port/SKILL.md)
-- [API Link (External APIs)](file:../mcp-api-link/SKILL.md)
+- [Radar AST (Code Structure)](../mcp-radar-ast/SKILL.md)
+- [Doc Scribe (Documentation)](../mcp-doc-scribe/SKILL.md)
+- [Debug Probe (Diagnostics)](../mcp-debug-probe/SKILL.md)
+- [Cargo DB (Data)](../mcp-cargo-db/SKILL.md)
+- [View Port (Frontend)](../mcp-view-port/SKILL.md)
+- [API Link (External APIs)](../mcp-api-link/SKILL.md)
 
 ### 2. The "Token-Offload" Mandate [REQUIRES LOCAL GPU/Ollama]
 Whenever a task requires a summary, explanation, or docstring generation, **always** prefer the `*_local` tools. This uses the local RTX 3060 to save Cloud AI input/output tokens.
