@@ -56,6 +56,17 @@ This document provides definitive guidelines for AI agents and developers on how
 
 ---
 
+## 6. `api-link` (External API bridge)
+
+| Tool | When to Use | When NOT to Use |
+| :--- | :--- | :--- |
+| `get_openapi_map` | To see all available endpoints in a new API. | If you only need to check one specific path. |
+| `get_endpoint_schema` | Before constructing a POST/PUT body to ensure schema compliance. | For simple GET requests without complex params. |
+| `safe_api_execute` | **Mandatory** for any non-browser HTTP calls. Protects context. | Never use raw `curl` or `requests` in a script if this tool is available. |
+| `analyze_api_error_local` | When an API call returns a messy error page or complex JSON error. | For obvious errors like "404 Not Found". |
+
+---
+
 ## General Efficiency Rules
 
 1.  **Look Before You Leap**: Always use TOC/Skeleton tools before Reading.

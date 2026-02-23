@@ -22,6 +22,7 @@ For detailed instructions on each server, refer to their dedicated skills:
 - [Debug Probe (Diagnostics)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-debug-probe/SKILL.md)
 - [Cargo DB (Data)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-cargo-db/SKILL.md)
 - [View Port (Frontend)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-view-port/SKILL.md)
+- [API Link (External APIs)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-api-link/SKILL.md)
 
 ### 2. The "Token-Offload" Mandate
 Whenever a task requires a summary, explanation, or docstring generation, **always** prefer the `*_local` tools. This uses the local RTX 3060 to save Cloud AI input/output tokens.
