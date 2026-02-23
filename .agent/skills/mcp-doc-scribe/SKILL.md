@@ -17,11 +17,11 @@ This skill ensures documentation hygiene and "Ruthless Token Efficiency" by avoi
 - **Use Case**: Updating a specific feature description or fixing a typo.
 - **Mandate**: **Never** rewrite a whole `.md` file if you are only changing one section. Use this tool with the target `heading_name`.
 
-### 3. `summarize_doc_local`
+### 3. `summarize_doc_local` [REQUIRES LOCAL GPU/Ollama]
 - **Use Case**: Distilling naming conventions, deployment steps, or business logic from long docs.
 - **Protocol**: Offload the reading task to local Ollama to save input context.
 
-### 4. `generate_inline_docs`
+### 4. `generate_inline_docs` [REQUIRES LOCAL GPU/Ollama]
 - **Use Case**: Maintaining repository standards for Python docstrings (Google style).
 - **Mandate**: Use this for all new public functions/classes in the `shuttles` monorepo.
 

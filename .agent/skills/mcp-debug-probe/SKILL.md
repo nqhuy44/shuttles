@@ -17,7 +17,7 @@ This skill focuses on "Container-Aware" observation and intelligent troubleshoot
 - **Use Case**: Debugging live race conditions or monitoring background tasks.
 - **Mandate**: Always use keywords (e.g., "ERROR", "CRASH", "FATAL") to reduce noise.
 
-### 3. `analyze_crash_local`
+### 3. `analyze_crash_local` [REQUIRES LOCAL GPU/Ollama]
 - **Use Case**: Pinpointing the root cause of a complex stack trace.
 - **Protocol**: Feed the raw messy output from `run_and_capture` directly into this tool. The result is a distilled "Diagnosis" from the local LLM.
 

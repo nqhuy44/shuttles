@@ -40,7 +40,7 @@ async def handle_list_tools() -> List[Tool]:
         ),
         Tool(
             name="summarize_doc_local",
-            description="Offloads heavy reading of long documentation to local LLM for a gist/summary.",
+            description="[REQUIRES LOCAL GPU/Ollama] Offloads heavy reading of long documentation to local LLM for a gist/summary.",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -52,7 +52,7 @@ async def handle_list_tools() -> List[Tool]:
         ),
         Tool(
             name="generate_inline_docs",
-            description="Generates Google-style docstrings for functions or classes using local LLM.",
+            description="[REQUIRES LOCAL GPU/Ollama] Generates Google-style docstrings for functions or classes using local LLM.",
             inputSchema={
                 "type": "object",
                 "properties": {

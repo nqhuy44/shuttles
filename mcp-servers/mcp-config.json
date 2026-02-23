@@ -12,7 +12,7 @@
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "Advanced Codebase Radar. Performs AST-based structural analysis, multi-file skeleton mapping, and local LLM logic summarization. Best for deep architectural research and large file triage."
+            "description": "[REQUIRES LOCAL GPU/Ollama] Advanced Codebase Radar. Performs AST-based structural analysis and local LLM logic summarization. Best for deep architectural research."
         },
         "cargo-db": {
             "command": "cargo-db/.venv/bin/python",
@@ -37,7 +37,7 @@
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "Diagnostic Execution Probe. Runs commands safely, tails/filters logs in real-time, and performs local AI crash analysis. Primary tool for CI/CD debugging and runtime troubleshooting."
+            "description": "[REQUIRES LOCAL GPU/Ollama] Diagnostic Execution Probe. Runs commands safely, filters logs, and performs local AI crash analysis. Primary tool for debugging."
         },
         "doc-scribe": {
             "command": "doc-scribe/.venv/bin/python",
@@ -51,7 +51,7 @@
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "Documentation & Token Optimizer. Manages Markdown via deterministic structural patching and offloads summarization/docstring generation to local models. Mandatory for maintaining docs without burning Cloud AI quota."
+            "description": "[REQUIRES LOCAL GPU/Ollama] Documentation & Token Optimizer. Manages Markdown via deterministic patching and offloads summarization/docstring generation to local models."
         },
         "view-port": {
             "command": "view-port/.venv/bin/python",
@@ -60,6 +60,18 @@
             ],
             "disabled": false,
             "description": "Frontend Structural Radar. Inspects design tokens, maps component props, strips DOM noise, and navigates routes. Crucial for token-efficient UI/UX development without LLM overhead."
+        },
+        "api-link": {
+            "command": "api-link/.venv/bin/python",
+            "args": [
+                "api-link/server.py"
+            ],
+            "env": {
+                "OLLAMA_URL": "http://localhost:11434/api/generate",
+                "OLLAMA_MODEL": "qwen2.5-coder:14b"
+            },
+            "disabled": false,
+            "description": "[REQUIRES LOCAL GPU/Ollama] External API Shuttle. Maps OpenAPI specs, extracts schema-only context, and executes safe HTTP requests with local error analysis."
         }
     }
 }

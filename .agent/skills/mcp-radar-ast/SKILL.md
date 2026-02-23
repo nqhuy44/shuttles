@@ -24,7 +24,7 @@ This skill enables precise, token-efficient codebase exploration by prioritizing
 ### 4. The TOON Response Protocol
 **Mandatory** for list-based analysis. When returning lists of files, search results, or structural mappings, use the TOON (Array of Arrays) format to minimize boilerplate keys.
 
-### 5. `summarize_logic_local`
+### 5. `summarize_logic_local` [REQUIRES LOCAL GPU/Ollama]
 - **Use Case**: Explaining "How it works" for complex logic.
 - **Protocol**: Use this to offload long-form analysis to the local RTX 3060 (Ollama), then synthesize the result for the user.
 
