@@ -1,0 +1,57 @@
+{
+    "mcpServers": {
+        "radar-ast": {
+            "command": "radar-ast/.venv/bin/python",
+            "args": [
+                "radar-ast/server.py"
+            ],
+            "env": {
+                "OLLAMA_URL": "http://localhost:11434/api/generate",
+                "OLLAMA_MODEL": "qwen2.5-coder:7b",
+                "OLLAMA_NUM_CTX": "16384",
+                "OLLAMA_TEMPERATURE": "0.1"
+            },
+            "disabled": false,
+            "description": "Advanced Codebase Radar. Performs AST-based structural analysis, multi-file skeleton mapping, and local LLM logic summarization. Best for deep architectural research and large file triage."
+        },
+        "cargo-db": {
+            "command": "cargo-db/.venv/bin/python",
+            "args": [
+                "cargo-db/server.py"
+            ],
+            "env": {
+                "DB_CONNECTION_STRING": "postgresql://user:pass@localhost:5432/cargo"
+            },
+            "disabled": true,
+            "description": "Smart SQL Introspection. Provides schema visualization, join-path discovery, and query explanation. Use for database design and performance tuning."
+        },
+        "debug-probe": {
+            "command": "debug-probe/.venv/bin/python",
+            "args": [
+                "debug-probe/server.py"
+            ],
+            "env": {
+                "OLLAMA_URL": "http://localhost:11434/api/generate",
+                "OLLAMA_MODEL": "qwen2.5-coder:7b",
+                "OLLAMA_NUM_CTX": "16384",
+                "OLLAMA_TEMPERATURE": "0.1"
+            },
+            "disabled": false,
+            "description": "Diagnostic Execution Probe. Runs commands safely, tails/filters logs in real-time, and performs local AI crash analysis. Primary tool for CI/CD debugging and runtime troubleshooting."
+        },
+        "doc-scribe": {
+            "command": "doc-scribe/.venv/bin/python",
+            "args": [
+                "doc-scribe/server.py"
+            ],
+            "env": {
+                "OLLAMA_URL": "http://localhost:11434/api/generate",
+                "OLLAMA_MODEL": "qwen2.5-coder:7b",
+                "OLLAMA_NUM_CTX": "16384",
+                "OLLAMA_TEMPERATURE": "0.1"
+            },
+            "disabled": false,
+            "description": "Documentation & Token Optimizer. Manages Markdown via deterministic structural patching and offloads summarization/docstring generation to local models. Mandatory for maintaining docs without burning Cloud AI quota."
+        }
+    }
+}
