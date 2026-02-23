@@ -2,6 +2,11 @@
 
 This is the `radar-ast` local Model Context Protocol server. It handles codebase structure awareness and token reduction parsing using AST trees and Local LLM (Ollama) offloading capabilities.
 
+## Requirements
+- Python 3.11+
+- GPU with at least 8GB VRAM
+- Ollama running locally
+
 ## How to run
 1. Set up the Python environment: `make setup`
 2. Configure `.env`: Use `.env.example` as a template for configuring the connection to your local Ollama runtime.

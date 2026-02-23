@@ -12,7 +12,7 @@
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "Codebase scanner & AST summarizer. Use this when you need to understand project structure or get a logic summary of complex files without reading raw code."
+            "description": "Advanced Codebase Radar. Performs AST-based structural analysis, multi-file skeleton mapping, and local LLM logic summarization. Best for deep architectural research and large file triage."
         },
         "cargo-db": {
             "command": "cargo-db/.venv/bin/python",
@@ -23,7 +23,7 @@
                 "DB_CONNECTION_STRING": "postgresql://user:pass@localhost:5432/cargo"
             },
             "disabled": true,
-            "description": "Database introspection tool. Use this exclusively to query schemas, find table relations, read records, and analyze query performance on the specific database."
+            "description": "Smart SQL Introspection. Provides schema visualization, join-path discovery, and query explanation. Use for database design and performance tuning."
         },
         "debug-probe": {
             "command": "debug-probe/.venv/bin/python",
@@ -37,7 +37,19 @@
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "Automated debugging assistant. Execute scripts/tests safely, intelligently filter logs, and leverage local LLMs to diagnose complex stack traces."
+            "description": "Diagnostic Execution Probe. Runs commands safely, tails/filters logs in real-time, and performs local AI crash analysis. Primary tool for CI/CD debugging and runtime troubleshooting."
+        },
+        "doc-scribe": {
+            "command": "doc-scribe/.venv/bin/python",
+            "args": [
+                "doc-scribe/server.py"
+            ],
+            "env": {
+                "OLLAMA_URL": "http://localhost:11434/api/generate",
+                "OLLAMA_MODEL": "qwen2.5-coder:14b"
+            },
+            "disabled": false,
+            "description": "Documentation & Token Optimizer. Manages Markdown via deterministic structural patching and offloads summarization/docstring generation to local models. Mandatory for maintaining docs without burning Cloud AI quota."
         }
     }
 }
