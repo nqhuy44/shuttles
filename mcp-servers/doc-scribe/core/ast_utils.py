@@ -39,8 +39,7 @@ async def generate_inline_docs(file_path: str, function_name: str) -> str:
     
     docstring = await client.generate(
         model="qwen2.5-coder:14b",
-        prompt=prompt,
-        options={"temperature": 0.1}
+        prompt=prompt
     )
     
     if docstring.startswith("Error:"):

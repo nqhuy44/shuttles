@@ -1,3 +1,4 @@
+import os
 import httpx
 import json
 from typing import Optional, Dict, Any
@@ -6,16 +7,28 @@ class OllamaClient:
     def __init__(self, base_url: str = "http://localhost:11434"):
         self.base_url = base_url
         self.generate_url = f"{self.base_url}/api/generate"
+        
+        # Read defaults from environment
+        self.default_num_ctx = int(os.getenv("OLLAMA_NUM_CTX", "8192"))
+        self.default_temperature = float(os.getenv("OLLAMA_TEMPERATURE", "0.1"))
 
     async def generate(self, model: str, prompt: str, options: Optional[Dict[str, Any]] = None) -> str:
         """
         Sends a generation request to the local Ollama instance.
         """
+        # Build final options with defaults
+        final_options = {
+            "num_ctx": self.default_num_ctx,
+            "temperature": self.default_temperature
+        }
+        if options:
+            final_options.update(options)
+
         payload = {
             "model": model,
             "prompt": prompt,
             "stream": False,
-            "options": options or {}
+            "options": final_options
         }
         
         try:
@@ -53,6 +66,5 @@ async def summarize_doc_local(file_path: str, focus_query: Optional[str] = None)
     client = OllamaClient()
     return await client.generate(
         model="qwen2.5-coder:14b",
-        prompt=prompt,
-        options={"num_ctx": 8192, "temperature": 0.1}
+        prompt=prompt
     )

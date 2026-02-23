@@ -7,8 +7,8 @@
             ],
             "env": {
                 "OLLAMA_URL": "http://localhost:11434/api/generate",
-                "OLLAMA_MODEL": "qwen2.5-coder:14b",
-                "OLLAMA_NUM_CTX": "32768",
+                "OLLAMA_MODEL": "qwen2.5-coder:7b",
+                "OLLAMA_NUM_CTX": "16384",
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
@@ -32,8 +32,8 @@
             ],
             "env": {
                 "OLLAMA_URL": "http://localhost:11434/api/generate",
-                "OLLAMA_MODEL": "qwen2.5-coder:14b",
-                "OLLAMA_NUM_CTX": "32768",
+                "OLLAMA_MODEL": "qwen2.5-coder:7b",
+                "OLLAMA_NUM_CTX": "16384",
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
@@ -46,7 +46,9 @@
             ],
             "env": {
                 "OLLAMA_URL": "http://localhost:11434/api/generate",
-                "OLLAMA_MODEL": "qwen2.5-coder:14b"
+                "OLLAMA_MODEL": "qwen2.5-coder:7b",
+                "OLLAMA_NUM_CTX": "16384",
+                "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
             "description": "Documentation & Token Optimizer. Manages Markdown via deterministic structural patching and offloads summarization/docstring generation to local models. Mandatory for maintaining docs without burning Cloud AI quota."
