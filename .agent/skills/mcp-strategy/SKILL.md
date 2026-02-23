@@ -15,6 +15,14 @@ This skill directs the AI on how to interact with the Shuttles MCP ecosystem eff
 - **Python/Code**: Use `radar-ast.get_file_skeleton` to map out class and function definitions.
 - **Directories**: Use `radar-ast.get_dir_tree` (max depth 2-3) to understand context.
 
+## Specialized Server Skills
+For detailed instructions on each server, refer to their dedicated skills:
+- [Radar AST (Code Structure)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-radar-ast/SKILL.md)
+- [Doc Scribe (Documentation)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-doc-scribe/SKILL.md)
+- [Debug Probe (Diagnostics)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-debug-probe/SKILL.md)
+- [Cargo DB (Data)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-cargo-db/SKILL.md)
+- [View Port (Frontend)](file:///home/nqhuy/nqhuy/shuttles/.agent/skills/mcp-view-port/SKILL.md)
+
 ### 2. The "Token-Offload" Mandate
 Whenever a task requires a summary, explanation, or docstring generation, **always** prefer the `*_local` tools. This uses the local RTX 3060 to save Cloud AI input/output tokens.
 - `radar-ast.summarize_logic_local`
