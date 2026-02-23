@@ -11,7 +11,7 @@ TEMPERATURE = float(os.getenv("OLLAMA_TEMPERATURE", "0.1"))
 def get_tool() -> types.Tool:
     return types.Tool(
         name="summarize_logic_local",
-        description="Uses the local Ollama model to summarize the implementation details of a specific function or file, preventing the Cloud AI from having to read raw code.",
+        description="[REQUIRES LOCAL GPU/Ollama] Uses the local Ollama model to summarize the implementation details of a specific function or file, preventing the Cloud AI from having to read raw code.",
         inputSchema={
             "type": "object",
             "properties": {

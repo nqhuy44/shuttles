@@ -21,7 +21,7 @@ This skill ensures you can explore and test external APIs without burning the Cl
 - **Use Case**: Testing an endpoint or fetching data.
 - **Safety**: This tool automatically truncates large responses. Do not worry about "flooding" the context.
 
-### 4. `analyze_api_error_local`
+### 4. `analyze_api_error_local` [REQUIRES LOCAL GPU/Ollama]
 - **Use Case**: Debugging 400 Bad Request or 500 Internal Server Error.
 - **Protocol**: If `safe_api_execute` fails with a complex error, feed it into this tool to get a fixed payload recommendation from the RTX 3060.
 

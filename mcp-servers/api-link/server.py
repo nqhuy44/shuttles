@@ -53,7 +53,7 @@ async def handle_list_tools() -> list[Tool]:
         ),
         Tool(
             name="analyze_api_error_local",
-            description="Uses local hardware to analyze complex 4xx/5xx API errors and suggest fixes.",
+            description="[REQUIRES LOCAL GPU/Ollama] Uses local hardware to analyze complex 4xx/5xx API errors and suggest fixes.",
             inputSchema={
                 "type": "object",
                 "properties": {

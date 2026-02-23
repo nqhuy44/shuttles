@@ -12,7 +12,7 @@ TEMPERATURE = float(os.getenv("OLLAMA_TEMPERATURE", "0.1"))
 def get_tool() -> types.Tool:
     return types.Tool(
         name="analyze_crash_local",
-        description="Sends a raw, messy stack trace to the local Ollama LLM to pinpoint the root cause.",
+        description="[REQUIRES LOCAL GPU/Ollama] Sends a raw, messy stack trace to the local Ollama LLM to pinpoint the root cause.",
         inputSchema={
             "type": "object",
             "properties": {
