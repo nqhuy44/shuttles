@@ -45,6 +45,17 @@ This document provides definitive guidelines for AI agents and developers on how
 
 ---
 
+## 5. `view-port` (Frontend structural analysis)
+
+| Tool | When to Use | When NOT to Use |
+| :--- | :--- | :--- |
+| `extract_design_tokens` | To find available colors/spacing before styling new components. | If tokens are already listed in `docs/TECH_STACK.md`. |
+| `scan_ui_components` | To discover existing components and their props to avoid duplicates. | When you are already in the specific component file. |
+| `extract_dom_skeleton` | **First step** for debugging UI layout issues. Reduces JSX noise to pure structure. | For simple HTML snippets (< 20 lines). |
+| `map_frontend_routes` | To find the correct URL path for navigating or linking. | If you already know the route from the browser address bar. |
+
+---
+
 ## General Efficiency Rules
 
 1.  **Look Before You Leap**: Always use TOC/Skeleton tools before Reading.

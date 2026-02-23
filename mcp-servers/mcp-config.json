@@ -52,6 +52,14 @@
             },
             "disabled": false,
             "description": "Documentation & Token Optimizer. Manages Markdown via deterministic structural patching and offloads summarization/docstring generation to local models. Mandatory for maintaining docs without burning Cloud AI quota."
+        },
+        "view-port": {
+            "command": "view-port/.venv/bin/python",
+            "args": [
+                "view-port/server.py"
+            ],
+            "disabled": false,
+            "description": "Frontend Structural Radar. Inspects design tokens, maps component props, strips DOM noise, and navigates routes. Crucial for token-efficient UI/UX development without LLM overhead."
         }
     }
 }
