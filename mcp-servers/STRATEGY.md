@@ -67,9 +67,20 @@ This document provides definitive guidelines for AI agents and developers on how
 
 ---
 
-## General Efficiency Rules
+## 7. `qa-deck` (Quality Assurance & Tokens)
 
-1.  **Look Before You Leap**: Always use TOC/Skeleton tools before Reading.
-2.  **Edit Only What You Must**: Use `patch` tools whenever possible.
-3.  **Localize Heavy Lifting**: Offload summarization and explanation to Ollama (`_local` suffix).
-4.  **No Double Dipping**: If the info is in `docs/`, use standard file tools. Use MCP tools for live/dynamic introspection.
+| Tool | When to Use | When NOT to Use |
+| :--- | :--- | :--- |
+| `run_test_compact` | **Mandatory** for all test runs (pytest). Protects context from stdout noise. | Only use `run_command` if you need interactive test debugging. |
+| `get_coverage_gaps` | To find missing test lines without reading massive reports. | When you only need the summary % from a small output. |
+| `diagnose_failure_local` | **Mandatory** for complex/long stack traces. Offloads analysis to local GPU. | For simple syntax errors or index errors shown in the compact output. |
+
+---
+
+## General Efficiency Rules (STRICT ENFORCEMENT)
+
+1.  **RUTHLESS Token Conservation**: Always prioritize structural tools (Skeleton/TOC) over raw reading.
+2.  **MANDATORY Patching**: Use `patch_doc_section` or multi-file edits. Never rewrite large files entirely.
+3.  **MANDATORY Local Offloading**: Any tool with the `_local` suffix **must** be used for summarization/analysis.
+4.  **MANDATORY QA Deck**: Never burn tokens on raw test output. Use `run_test_compact`.
+5.  **No Double Dipping**: Check `docs/` first. If missing, use MCP tools for live mapping.

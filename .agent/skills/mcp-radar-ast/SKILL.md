@@ -15,7 +15,7 @@ This skill enables precise, token-efficient codebase exploration by prioritizing
 
 ### 2. `get_file_skeleton`
 - **Use Case**: Understanding a file's API (classes, methods, arguments) without reading the implementation.
-- **Mandate**: **Always** call this before reading any file larger than 100 lines.
+- **Mandate**: **RUTHLESSLY MANDATORY**. Always call this before reading ANY file larger than 100 lines. Failure to do so burns excessive tokens.
 
 ### 3. `read_specific_lines`
 - **Use Case**: Focusing on a specific function implementation identified via `get_file_skeleton`.
@@ -26,7 +26,7 @@ This skill enables precise, token-efficient codebase exploration by prioritizing
 
 ### 5. `summarize_logic_local` [REQUIRES LOCAL GPU/Ollama]
 - **Use Case**: Explaining "How it works" for complex logic.
-- **Protocol**: Use this to offload long-form analysis to the local RTX 3060 (Ollama), then synthesize the result for the user.
+- **Protocol**: **Mandatory** for any file > 300 lines or complex logic blocks. Use this to offload long-form analysis to the local RTX 3060 (Ollama), then synthesize the result for the user.
 
 ## Strategic Workflow
 
