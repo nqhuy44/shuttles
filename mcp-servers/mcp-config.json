@@ -12,7 +12,7 @@
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "[REQUIRES LOCAL GPU/Ollama] Advanced Codebase Radar. Performs AST-based structural analysis and local LLM logic summarization. Best for deep architectural research."
+            "description": "[PARTIAL REQUIRES LOCAL GPU/Ollama] Advanced Codebase Radar. Performs AST-based structural analysis and local LLM logic summarization. Best for deep architectural research."
         },
         "cargo-db": {
             "command": "cargo-db/.venv/bin/python",
@@ -37,7 +37,7 @@
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "[REQUIRES LOCAL GPU/Ollama] Diagnostic Execution Probe. Runs commands safely, filters logs, and performs local AI crash analysis. Primary tool for debugging."
+            "description": "[PARTIAL REQUIRES LOCAL GPU/Ollama] Diagnostic Execution Probe. Runs commands safely, filters logs, and performs local AI crash analysis. Primary tool for debugging."
         },
         "doc-scribe": {
             "command": "doc-scribe/.venv/bin/python",
@@ -51,7 +51,7 @@
                 "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "[REQUIRES LOCAL GPU/Ollama] Documentation & Token Optimizer. Manages Markdown via deterministic patching and offloads summarization/docstring generation to local models."
+            "description": "[PARTIAL REQUIRES LOCAL GPU/Ollama] Documentation & Token Optimizer. Manages Markdown via deterministic patching and offloads summarization/docstring generation to local models."
         },
         "view-port": {
             "command": "view-port/.venv/bin/python",
@@ -68,10 +68,26 @@
             ],
             "env": {
                 "OLLAMA_URL": "http://localhost:11434/api/generate",
-                "OLLAMA_MODEL": "qwen2.5-coder:14b"
+                "OLLAMA_MODEL": "qwen2.5-coder:14b",
+                "OLLAMA_NUM_CTX": "16384",
+                "OLLAMA_TEMPERATURE": "0.1"
             },
             "disabled": false,
-            "description": "[REQUIRES LOCAL GPU/Ollama] External API Shuttle. Maps OpenAPI specs, extracts schema-only context, and executes safe HTTP requests with local error analysis."
+            "description": "[PARTIAL REQUIRES LOCAL GPU/Ollama] External API Shuttle. Maps OpenAPI specs, extracts schema-only context, and executes safe HTTP requests with local error analysis."
+        },
+        "qa-deck": {
+            "command": "qa-deck/.venv/bin/python",
+            "args": [
+                "qa-deck/server.py"
+            ],
+            "env": {
+                "OLLAMA_URL": "http://localhost:11434/api/generate",
+                "OLLAMA_MODEL": "qwen2.5-coder:14b",
+                "OLLAMA_NUM_CTX": "16384",
+                "OLLAMA_TEMPERATURE": "0.1"
+            },
+            "disabled": false,
+            "description": "[PARTIAL REQUIRES LOCAL GPU/Ollama] Quality Assurance Server. Runs token-optimized tests, analyzes coverage gaps, and diagnoses failures using local hardware."
         }
     }
 }

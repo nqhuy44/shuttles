@@ -10,8 +10,9 @@ This skill focuses on "Container-Aware" observation and intelligent troubleshoot
 ## Core Tools
 
 ### 1. `run_and_capture`
-- **Use Case**: Verifying builds (`make build`), running tests (`make test`), or checking environment state.
+- **Use Case**: Verifying builds (`make build`), checking environment state, or running generic background commands.
 - **Protocol**: Always capture both stdout and stderr to ensure full visibility.
+- **Note**: For running Python (pytest) tests, **MANDATORY** use `qa-deck.run_test_compact` instead.
 
 ### 2. `tail_filtered_logs`
 - **Use Case**: Debugging live race conditions or monitoring background tasks.

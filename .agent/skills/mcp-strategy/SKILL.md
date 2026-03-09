@@ -15,6 +15,10 @@ This skill directs the AI on how to interact with the Shuttles MCP ecosystem eff
 - **Python/Code**: Use `radar-ast.get_file_skeleton` to map out class and function definitions.
 - **Directories**: Use `radar-ast.get_dir_tree` (max depth 2-3) to understand context.
 
+### 2. The QA-Deck Mandate (NEW)
+**Mandatory** use of `qa-deck.run_test_compact` for all testing. Native terminal execution for tests is **PROHIBITED** to save tokens.
+- [Quality Assurance Deck (Testing)](../mcp-qa-deck/SKILL.md)
+
 ## Specialized Server Skills
 For detailed instructions on each server, refer to their dedicated skills:
 - [Radar AST (Code Structure)](../mcp-radar-ast/SKILL.md)
@@ -30,6 +34,7 @@ Whenever a task requires a summary, explanation, or docstring generation, **alwa
 - `doc-scribe.summarize_doc_local`
 - `doc-scribe.generate_inline_docs`
 - `debug-probe.analyze_crash_local`
+- `qa-deck.diagnose_failure_local`
 
 ### 3. The "Patch-Only" Protocol
 For large configuration or documentation files, **never** perform a full-file rewrite.
@@ -49,7 +54,8 @@ For large configuration or documentation files, **never** perform a full-file re
 | Exploring Project | `radar-ast` | `get_dir_tree` | `list_dir` (recursive) |
 | Reading Large File | `radar-ast` | `get_file_skeleton` | `view_file` (full) |
 | Updating Docs | `doc-scribe` | `patch_doc_section` | `write_to_file` (rewrite) |
-| Running Tests | `debug-probe` | `run_and_capture` | Manual terminal commands |
+| DB Research | `cargo-db` | `get_schema` / `find_join_path` | Manual SQL exploration |
+| Running Tests | `qa-deck` | `run_test_compact` | `run_command` / native test output |
 | DB Research | `cargo-db` | `get_schema` / `find_join_path` | Manual SQL exploration |
 
 ## When NOT to use MCP Tools
